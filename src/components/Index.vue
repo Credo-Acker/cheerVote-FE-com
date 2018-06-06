@@ -25,7 +25,7 @@
                 <ul>
                     <li v-for="(item, index) in information" class="li_indexInfo" v-bind:key="index">
                         <router-link :to="{path:'/viewDetail/'+item.classId}">
-                            <img v-bind:src="item.firstImg" class="firstImg">
+                            <img v-bind:src="'http://www.newtol.cn/' + item.firstImg" class="firstImg">
                             <span class="className">{{item.className}}</span>
                             <span class="slogan">{{item.slogan}}</span>
                         </router-link>

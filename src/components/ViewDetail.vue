@@ -48,7 +48,7 @@
                 </div>
                 <ul class="picture_main">
                     <li class="picture_item" v-for="(item, index) in duiyuan" @click="openImg(index)" :key="index">
-                        <img :src="item.imgUrl">
+                        <img :src="'http://www.newtol.cn/' + item.imgUrl">
                     </li>
                 </ul>
             </div>
@@ -87,7 +87,7 @@
         <div class="bigImg opnone" @click="close">
             <wc-swiper :duration="1500" :autoplay="false" :defaultSlide="0" :pagination="false" ref="swiper" v-if="duiyuan.length">
                 <wc-slide v-for="(item, key) in duiyuan" :key="key">
-                    <img :src="item.imgUrl">
+                    <img :src="'http://www.newtol.cn/' + item.imgUrl">
                     <div class="description">
                         {{item.playerName}}：{{item.introduce}}
                         <span>{{key + 1}}/{{duiyuanLength}}</span>
@@ -175,9 +175,9 @@ export default {
             })
             .then((response) => {
                 this.information = response.data;
-                this.slides.push(this.information.playImg1);
-                this.slides.push(this.information.playImg2);
-                this.slides.push(this.information.playImg3);
+                this.slides.push("http://www.newtol.cn/" + this.information.playImg1);
+                this.slides.push("http://www.newtol.cn/" + this.information.playImg2);
+                this.slides.push("http://www.newtol.cn/" + this.information.playImg3);
                 // this.isWeiXin();
                 this.className = response.data.className;
                 this.video = this.video_List[this.className];

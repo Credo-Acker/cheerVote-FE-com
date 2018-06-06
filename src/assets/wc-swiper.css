@@ -1,0 +1,8 @@
+.wc-swiper-container{position:relative;width:100%;overflow:hidden;border-radius:5px;height:4.04rem;}
+.wc-default-swiper-box{height:100%}
+.wc-default-swiper-box,.wc-pagination{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.wc-pagination{position:absolute;bottom:0.2rem;height:0.266rem;background:transparent;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.wc-pagination .wc-dot{height:0.266rem;width:0.266rem;background:#bababa;opacity:.2;margin:0 5px;-webkit-border-radius:50%;border-radius:50%}
+.wc-pagination .wc-dot-active{opacity:1;background:#ffffff}
+.wc-slide{height:100%;width:100%;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;z-index:10;overflow:hidden}
+.wc-slide img{-webkit-user-drag:none}

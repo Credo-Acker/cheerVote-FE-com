@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport><title>拉拉队大比拼</title><link href=./static/css/app.eded2f1cd1f7ae32bf00f46ec2f014b9.css rel=stylesheet></head><body><div id=app></div><script src=https://res.wx.qq.com/open/js/jweixin-1.0.0.js></script><script src=https://wx.idsbllp.cn/wx-api/share.js></script><script>WXSHARE.config({debug: false});
+    WXSHARE.ready(function() {
+        var option = {
+              title: "打CALL校运会|各学院拉拉队大比拼震撼上演！投票开始，大奖等你拿",
+              link: "https://wx.idsbllp.cn/cheer_vote/redirect",
+              imgUrl: 'https://wx.idsbllp.cn/nodejs/cheerVote/img/main.jpg',
+              desc: '重庆邮电大学第十三届田径运动会震撼来袭！快给你喜爱的拉拉队投上宝贵的一票吧',
+              type: '',
+              success: function() {
+                  console.log('分享成功');
+              },
+              cancel: function() {
+                  console.log('取消分享');
+              },
+          };
+          wx.onMenuShareTimeline(option);
+          wx.onMenuShareAppMessage(option);
+          wx.onMenuShareQQ(option);
+          wx.onMenuShareWeibo(option);
+          wx.onMenuShareQZone(option);
+    });</script><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.efcb06ba63462890b8b2.js></script><script type=text/javascript src=./static/js/app.e15c7b8fce1bdf11713f.js></script></body></html>

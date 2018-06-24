@@ -269,17 +269,16 @@ export default {
                 return false;
             }
 
-            let data = JSON.stringify([{
+            let data = [{
                 classId: this.cheer_classId,
                 num: parseInt(cheerToNum.value),
                 groupId: this.cheer_groupId
-            }]);
-            let string = this.$base64.encode(data);
+            }];
+            let string = this.$base64.encode(JSON.stringify(data));
             let timestamp = Math.round(new Date().getTime() / 1000).toString();
             // let nonce = parseInt(100 * Math.random());
             let nonce = "a".toUpperCase();
-
-            let signature = this.$sha1(this.$md5(string + timestamp + nonce) + 'cheer_vote').toUpperCase();
+            let signature = this.$sha1(this.$md5(string + timestamp + nonce) + "cheer_vote").toUpperCase();
             let params = {
                 "string": string,
                 "timestamp": timestamp,

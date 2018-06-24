@@ -40,10 +40,10 @@ export default {
                 let todayNum = response.data.todayNum;
                 let enter = document.querySelector('.enter');
                 if (todayNum > 0) {
-                    this.isEnter2 = false;
+                    this.isEnter2 = true;
                     enter.className = "enter enter2";
                 } else {
-                    this.isEnter2 = true;
+                    this.isEnter2 = false;
                     enter.className = "enter enter1";
                 }
             })

@@ -269,11 +269,12 @@ export default {
                 return false;
             }
 
-            let data = [{
+            let data = [];
+            data.push({
                 classId: this.cheer_classId,
                 num: parseInt(cheerToNum.value),
                 groupId: this.cheer_groupId
-            }];
+            });
             let string = this.$base64.encode(JSON.stringify(data));
             let timestamp = Math.round(new Date().getTime() / 1000).toString();
             // let nonce = parseInt(100 * Math.random());
@@ -340,7 +341,7 @@ export default {
                 "nonce": nonce,
                 "signature": signature
             };
-            //发送助力数
+            //发送留言
             this.$http.post(this.api+'/vote/user/content', params)
                 .then((response) => {
                     this.$http.get(this.api+'/vote/user/content', {

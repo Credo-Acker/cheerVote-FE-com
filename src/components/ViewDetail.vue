@@ -306,6 +306,7 @@ export default {
                     cheerToNum.value = "";
                 })
                 .catch((err) => {
+                    alert(err)
                     console.log(err);
                 });
         },

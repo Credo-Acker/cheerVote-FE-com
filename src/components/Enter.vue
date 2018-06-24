@@ -1,5 +1,5 @@
 <template>
-    <div class="enter" v-bind:class="{enter2: isEnter2, enter1: !isEnter2}">
+    <div class="enter">
         <router-link to="/index" class="toIndex">
             <button class="over"></button>
         </router-link>
@@ -38,10 +38,13 @@ export default {
         this.$http.get(this.api+'/vote/user/todayNum')
             .then((response) => {
                 let todayNum = response.data.todayNum;
+                let enter = document.querySelector('.enter');
                 if (todayNum <= 0) {
                     this.isEnter2 = false;
+                    enter.style.className = "enter enter1";
                 } else {
                     this.isEnter2 = true;
+                    enter.style.className = "enter enter2";
                 }
             })
             .catch((error) => {

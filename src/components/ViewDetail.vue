@@ -271,7 +271,7 @@ export default {
 
             let data = [];
             data.push({
-                classId: this.cheer_classId,
+                classId: this.classid,
                 num: parseInt(cheerToNum.value),
                 groupId: this.cheer_groupId
             });

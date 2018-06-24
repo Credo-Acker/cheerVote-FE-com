@@ -28,6 +28,7 @@ export default {
             duichao: "0%",
             zhu: 0,
             zhuchao: "0%",
+            isEnter2: false,
             // api: "http://g5wcuw.natappfree.cc"
             api: "http://www.newtol.cn"
         }
@@ -39,8 +40,10 @@ export default {
                 let todayNum = response.data.todayNum;
                 let enter = document.querySelector('.enter');
                 if (todayNum > 0) {
+                    this.isEnter2 = false;
                     enter.className = "enter enter2";
                 } else {
+                    this.isEnter2 = true;
                     enter.className = "enter enter1";
                 }
             })

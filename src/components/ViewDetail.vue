@@ -275,11 +275,11 @@ export default {
                 groupId: this.cheer_groupId
             }]);
             let string = this.$base64.encode(data);
-            let timestamp = Math.round(new Date().getTime() / 1000);
+            let timestamp = Math.round(new Date().getTime() / 1000).toString();
             // let nonce = parseInt(100 * Math.random());
             let nonce = "a".toUpperCase();
 
-            let signature = this.$sha1(this.$md5(string) + timestamp.toString() + nonce + 'cheer_vote').toUpperCase();
+            let signature = this.$sha1(this.$md5(string + timestamp + nonce) + 'cheer_vote').toUpperCase();
             let params = {
                 "string": string,
                 "timestamp": timestamp,

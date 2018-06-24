@@ -1,5 +1,5 @@
 <template>
-    <div class="enter" v-bind:class="{enter2: isEnter2}">
+    <div class="enter" v-bind:class="{enter2: isEnter2, enter1: !isEnter2}">
         <router-link to="/index" class="toIndex">
             <button class="over"></button>
         </router-link>
@@ -87,9 +87,12 @@ export default {
     position: relative;
     width: 10rem;
     height: 100%;
+    z-index: 9;
+}
+
+.enter1 {
     background: url(../assets/enter.png);
     background-size: 100% 100%;
-    z-index: 9;
 }
 
 .enter2 {
